@@ -5,10 +5,11 @@ const connectDB = require('./config/db');
 
 // Route files
 const auth = require('./routes/auth');
+const users = require('./routes/users');
 const errorHandler = require('./middleware/error');
 
 // Load env vars
-dotenv.config({ path: './config/config.env.example' });
+dotenv.config({ path: './config/config.env' });
 
 // Connect to database
 connectDB();
@@ -23,6 +24,7 @@ app.use(cors());
 
 // Mount routers
 app.use('/api/v1/auth', auth);
+app.use('/api/v1/users', users);
 
 app.use(errorHandler);
 
