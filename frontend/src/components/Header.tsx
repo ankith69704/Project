@@ -40,6 +40,18 @@ function Header() {
             </li>
           </>
         )}
+        <li>
+          <Link to='/projects'>
+            Projects
+          </Link>
+        </li>
+        {user && user.role === 'Admin' && (
+          <li>
+            <Link to='/admin'>
+              Admin
+            </Link>
+          </li>
+        )}
       </ul>
     </header>
   );
