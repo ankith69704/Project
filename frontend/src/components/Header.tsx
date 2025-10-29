@@ -52,6 +52,20 @@ function Header() {
             </Link>
           </li>
         )}
+        {user && (
+          <li>
+            <Link to='/membership'>
+              Membership
+            </Link>
+          </li>
+        )}
+        {user && (
+          <li>
+            <Link to='/payment-history'>
+              Payment History
+            </Link>
+          </li>
+        )}
       </ul>
     </header>
   );

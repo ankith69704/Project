@@ -8,6 +8,9 @@ import ProjectListPage from './pages/ProjectListPage';
 import ProjectDetailsPage from './pages/ProjectDetailsPage';
 import AdminPage from './pages/AdminPage';
 import PrivateRoute from './components/PrivateRoute';
+import MembershipPage from './pages/MembershipPage';
+import PaymentSuccessPage from './pages/PaymentSuccessPage';
+import PaymentHistoryPage from './pages/PaymentHistoryPage';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
             <Route path='/admin' element={<PrivateRoute />}>
               <Route path='/admin' element={<AdminPage />} />
             </Route>
+            <Route path='/membership' element={<MembershipPage />} />
+            <Route path='/paymentsuccess' element={<PaymentSuccessPage />} />
+            <Route path='/payment-history' element={<PaymentHistoryPage />} />
           </Routes>
         </div>
       </Router>
