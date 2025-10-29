@@ -6,6 +6,7 @@ const connectDB = require('./config/db');
 // Route files
 const auth = require('./routes/auth');
 const users = require('./routes/users');
+const projects = require('./routes/projects');
 const errorHandler = require('./middleware/error');
 
 // Load env vars
@@ -25,6 +26,7 @@ app.use(cors());
 // Mount routers
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/users', users);
+app.use('/api/v1/projects', projects);
 
 app.use(errorHandler);
 
